@@ -1,38 +1,109 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 20px;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header {
+  width: 80%;
+  max-width: 900px;
+  background-color: #20232a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.daily-metrics-section, .video-stats-section {
+  width: 80%;
+  max-width: 900px;
+  background-color: #20232a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.video-item {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.video-item h3 {
+  color: #61dafb;
+  margin-top: 0;
+  font-size: 1.1em;
+}
+
+.loading-message, .error-message, .no-data-message, .error-data {
+  padding: 20px;
+  color: yellow;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.8em;
+  color: #bbb;
+}
+
+/* --- NAYI STYLING (DATE FILTER) --- */
+.date-filter-section {
+  width: 80%;
+  max-width: 900px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 0 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.date-filter-section h3 {
+  color: #61dafb;
+  margin: 0;
+  font-size: 1em;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.date-filter-section label {
+  color: white;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-filter-section input[type="date"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: white;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.date-filter-section input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Makes the calendar icon white */
+}
+/* --- NAYI STYLING END --- */
